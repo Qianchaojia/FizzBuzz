@@ -65,7 +65,35 @@ TestResult runTests1(){
     return result;
 }
 
+TestResult runTests2(){
+    TestResult result;
+    result = runTest(0, "FizzBuzz");
+    cout << result.message << endl;
+    result = runTest(-3, "Fizz");
+    cout << result.message << endl;
+    result = runTest(-5, "Buzz");
+    cout << result.message << endl;
+    result = runTest(-15, "FizzBuzz");
+    cout << result.message << endl;
+    result = runTest(-1, "-1");
+    cout << result.message << endl;
+    result = runTest(-2, "-2");
+    cout << result.message << endl;
+    result = runTest(100, "Buzz");
+    cout << result.message << endl;
+    result = runTest(105, "FizzBuzz");
+    cout << result.message << endl;
+    result = runTest(1000, "Buzz");
+    cout << result.message << endl;
+    result = runTest(1005, "FizzBuzz");
+    cout << result.message << endl;
+    result = runTest(3000, "FizzBuzz");
+    cout << result.message << endl;
+    return result;
+}
+
 int main(int argc,char** argv){
     runTests1();
+    runTests2();
     return 0;
 }
