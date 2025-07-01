@@ -38,9 +38,34 @@ TestResult runTest(Input input, ExpectedOutput expected) {
     return result;
 }
 
-TestResult runTests(){}
+TestResult runTests1(){
+    TestResult result;
+    result = runTest(1, "1");
+    cout << result.message << endl;
+    result = runTest(3, "Fizz");
+    cout << result.message << endl;
+    result = runTest(4, "4");
+    cout << result.message << endl;
+    result = runTest(5, "Buzz");
+    cout << result.message << endl;
+    result = runTest(6, "Fizz");
+    cout << result.message << endl;
+    result = runTest(9, "Fizz");
+    cout << result.message << endl;
+    result = runTest(10, "Buzz");
+    cout << result.message << endl;
+    result = runTest(12, "Fizz");
+    cout << result.message << endl;
+    result = runTest(15, "FizzBuzz");
+    cout << result.message << endl;
+    result = runTest(20, "Buzz");
+    cout << result.message << endl;
+    result = runTest(30, "FizzBuzz");
+    cout << result.message << endl;
+    return result;
+}
 
 int main(int argc,char** argv){
-    runTests();
+    runTests1();
     return 0;
 }
